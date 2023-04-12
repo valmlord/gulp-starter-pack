@@ -1,0 +1,9 @@
+{
+    "extends": ["airbnb"],
+    "globals": {
+      "$": true
+    },
+    "rules": {
+      // Here you can add your rules
+    }
+}

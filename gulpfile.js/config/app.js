@@ -1,32 +1,31 @@
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
 
-
 module.exports = {
-  isProd: isProd,
-  isDev: isDev,
+  isProd,
+  isDev,
 
   htmlmin: {
-    collapseWhitespace: isProd
+    collapseWhitespace: isProd,
   },
 
   pug: {
     data: {
-      social: require('../data/social.json')
+      social: require('../data/social.json'),
     },
-    pretty: isDev
+    pretty: isDev,
   },
 
   webpack: {
-    mode: isProd ? "production" : "development"
+    mode: isProd ? 'production' : 'development',
   },
 
   imagemin: {
-    verbose: true
+    verbose: true,
   },
 
   fonter: {
-    formats: ["ttf", "woff", "eot", "svg"]
+    formats: ['ttf', 'woff', 'eot', 'svg'],
   },
 
   favicons: {
@@ -36,7 +35,7 @@ module.exports = {
     developerName: '',
     developerURL: '',
     background: '#fff',
-    path: "img/favicon/",
+    path: 'img/favicon/',
     icons: {
       favicons: true,
       appleIcon: true,
@@ -45,8 +44,8 @@ module.exports = {
       yandex: false,
       coast: false,
       firefox: false,
-      appleStartup: false
-    }
+      appleStartup: false,
+    },
 
-  }
-}
+  },
+};
