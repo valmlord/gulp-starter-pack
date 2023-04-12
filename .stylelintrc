@@ -1,0 +1,127 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recess-order",
+        "stylelint-order",
+        "stylelint-scss",
+    ],
+    "customSyntax": "postcss-scss",
+    "rules": {
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            "at-rules",
+            "declarations",
+            "rules"
+        ],
+        "order/properties-order": [
+            {
+                "groupName": "positioning",
+                "properties": [
+                    "position",
+                    "top",
+                    "right",
+                    "bottom",
+                    "left",
+                    "z-index"
+                ]
+            },
+            {
+                "groupName": "box-model",
+                "properties": [
+                    "display",
+                    "float",
+                    "clear",
+                    "flex",
+                    "flex-grow",
+                    "flex-shrink",
+                    "flex-basis",
+                    "flex-flow",
+                    "grid",
+                    "grid-area",
+                    "grid-template",
+                    "grid-template-areas",
+                    "grid-template-rows",
+                    "grid-template-columns",
+                    "grid-row",
+                    "grid-row-start",
+                    "grid-row-end",
+                    "grid-column",
+                    "grid-column-start",
+                    "grid-column-end",
+                    "gap",
+                    "align-content",
+                    "align-items",
+                    "align-self",
+                    "justify-content",
+                    "justify-items",
+                    "justify-self",
+                    "box-sizing",
+                    "width",
+                    "min-width",
+                    "max-width",
+                    "height",
+                    "min-height",
+                    "max-height",
+                    "margin",
+                    "margin-top",
+                    "margin-right",
+                    "margin-bottom",
+                    "margin-left",
+                    "padding",
+                    "padding-top",
+                    "padding-right",
+                    "padding-bottom",
+                    "padding-left",
+                    "overflow",
+                    "overflow-x",
+                    "overflow-y"
+                ]
+            },
+            {
+                "groupName": "typography",
+                "properties": [
+                    "font",
+                    "font-family",
+                    "font-size",
+                    "font-weight",
+                    "font-style",
+                    "line-height",
+                    "letter-spacing",
+                    "text-align",
+                    "text-transform",
+                    "text-decoration",
+                    "text-overflow",
+                    "word-wrap",
+                    "white-space",
+                    "color"
+                ]
+            },
+            {
+                "groupName": "visual",
+                "properties": [
+                    "background",
+                    "background-color",
+                    "background-image",
+                    "background-repeat",
+                    "background-position",
+                    "background-size",
+                    "border",
+                    "border-radius",
+                    "outline",
+                    "box-shadow",
+                    "opacity",
+                    "visibility",
+                    "transform",
+                    "transition",
+                    "animation",
+                    "filter",
+                    "clip",
+                    "cursor",
+                    "pointer-events",
+                    "user-select"
+                ]
+            }
+        ]
+    }
+}

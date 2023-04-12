@@ -1,6 +1,4 @@
-@import 'block/promo.scss';
-
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url('base/*.scss');
+@import url('helpers/*.scss');
+@import url('vendor/_libs.scss');
+@import url('blocks/*.scss');
