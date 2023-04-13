@@ -18,11 +18,16 @@
     "last 3 versions"
   ],
   "keywords": [
-    "gulp-starter",
-    "gulp"
+    "html",
+    "css",
+    "javascript",
+    "starter-kit",
+    "gulp",
+    "yarn",
+    "webpack"
   ],
   "author": "Korshukov Stepan",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
