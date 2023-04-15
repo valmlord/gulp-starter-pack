@@ -40,6 +40,12 @@ export default {
     dest: `${pathDest}/img/`,
   },
 
+  svg: {
+    src: `${pathSrc}/img/sprite/*.svg`,
+    watch: `${pathSrc}/img/sprite/*.svg`,
+    dest: `${pathSrc}/img/sprite`,
+  },
+
   font: {
     src: `${pathSrc}/font/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
     watch: `${pathSrc}/font/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,

@@ -1,9 +1,9 @@
 import del from 'del';
 
 // Config
-import path from '../config/path.js';
+import path from '../config/path';
 
 // Directory deleting
-export default () => {
-  return del(path.root);
-};
+const clear = () => del(path.root);
+
+export default clear;

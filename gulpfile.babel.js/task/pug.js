@@ -7,22 +7,19 @@ import loadPlugins from 'gulp-load-plugins';
 import path from '../config/path';
 import app from '../config/app';
 
-// HTML processing
+// PUG processing
 const gp = loadPlugins();
-const html = () => gulp.src(path.html.src)
+const pug = () => gulp.src(path.pug.src)
   .pipe(
     gp.plumber({
       errorHandler: gp.notify.onError((error) => ({
-        title: 'HTML',
+        title: 'Pug',
         message: error.message,
       })),
     }),
   )
-  .pipe(gp.fileInclude())
+  .pipe(gp.pug(app.pug))
   .pipe(gp.webpHtml())
-  .pipe(gp.size({ title: 'Before Compression' }))
-  .pipe(gp.htmlmin(app.htmlmin))
-  .pipe(gp.size({ title: 'After Compression' }))
-  .pipe(gulp.dest(path.html.dest));
+  .pipe(gulp.dest(path.pug.dest));
 
-export default html;
+export default pug;

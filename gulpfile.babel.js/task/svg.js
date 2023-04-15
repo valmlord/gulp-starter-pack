@@ -7,22 +7,21 @@ import loadPlugins from 'gulp-load-plugins';
 import path from '../config/path';
 import app from '../config/app';
 
-// HTML processing
+// SVG processing
 const gp = loadPlugins();
-const html = () => gulp.src(path.html.src)
+const svg = () => gulp.src(path.svg.src)
   .pipe(
     gp.plumber({
       errorHandler: gp.notify.onError((error) => ({
-        title: 'HTML',
+        title: 'SVG',
         message: error.message,
       })),
     }),
   )
-  .pipe(gp.fileInclude())
-  .pipe(gp.webpHtml())
-  .pipe(gp.size({ title: 'Before Compression' }))
-  .pipe(gp.htmlmin(app.htmlmin))
-  .pipe(gp.size({ title: 'After Compression' }))
-  .pipe(gulp.dest(path.html.dest));
+  .pipe(gp.svgmin(app.spriteSvg.svgmin))
+  .pipe(gp.cheerio(app.spriteSvg.cheerio))
+  .pipe(gp.replace('&gt;', '>'))
+  .pipe(gp.svgSprite(app.spriteSvg.svgSprite))
+  .pipe(gulp.dest(path.svg.dest));
 
-export default html;
+export default svg;

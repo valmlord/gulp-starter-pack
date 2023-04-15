@@ -43,6 +43,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssimport": "^7.0.0",
     "gulp-csso": "^4.0.1",
@@ -60,15 +61,20 @@
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-size": "^4.0.1",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgmin": "^4.1.0",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
+    "i": "^0.3.7",
+    "npm": "^9.6.4",
     "require-dir": "^1.2.0",
     "sass": "^1.43.4",
     "stylelint": "^15.4.0",
@@ -81,6 +87,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gulp-fonter-2": "^0.3.0",
     "normalize.css": "^8.0.1"
   }
 }

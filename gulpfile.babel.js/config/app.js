@@ -30,6 +30,29 @@ export default {
     formats: ['ttf', 'woff', 'eot', 'svg'],
   },
 
+  spriteSvg: {
+    svgmin: {
+      js2svg: {
+        pretty: true,
+      },
+    },
+    cheerio: {
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: { xmlMode: true },
+    },
+    svgSprite: {
+      mode: {
+        symbol: {
+          sprite: 'sprite.svg',
+        },
+      },
+    },
+  },
+
   favicons: {
     appName: 'My App',
     appShortName: 'App',
