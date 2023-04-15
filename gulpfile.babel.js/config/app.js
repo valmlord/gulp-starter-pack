@@ -1,7 +1,9 @@
+import social from '../data/social.json';
+
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
 
-module.exports = {
+export default {
   isProd,
   isDev,
 
@@ -11,7 +13,7 @@ module.exports = {
 
   pug: {
     data: {
-      social: require('../data/social.json'),
+      social,
     },
     pretty: isDev,
   },

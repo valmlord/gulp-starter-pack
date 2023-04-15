@@ -1,7 +1,7 @@
 const pathSrc = './src';
 const pathDest = './public';
 
-module.exports = {
+export default {
   root: pathDest,
 
   html: {
