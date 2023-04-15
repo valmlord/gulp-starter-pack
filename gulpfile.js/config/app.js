@@ -46,6 +46,5 @@ module.exports = {
       firefox: false,
       appleStartup: false,
     },
-
   },
 };
