@@ -1,6 +1,8 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import gulp from 'gulp';
 
 // Plugins
+// eslint-disable-next-line import/no-extraneous-dependencies
 import loadPlugins from 'gulp-load-plugins';
 
 // Config
@@ -9,19 +11,23 @@ import app from '../config/app';
 
 // Image processing
 const gp = loadPlugins();
-const img = () => gulp.src(path.img.src)
-  .pipe(gp.plumber({
-    errorHandler: gp.notify.onError((error) => ({
-      title: 'IMG',
-      message: error.message,
-    })),
-  }))
-  .pipe(gp.newer(path.img.dest))
-  .pipe(gp.webp())
-  .pipe(gulp.dest(path.img.dest))
-  .pipe(gulp.src(path.img.src))
-  .pipe(gp.newer(path.img.dest))
-  .pipe(gp.if(app.isProd, gp.imagemin(app.imagemin)))
-  .pipe(gulp.dest(path.img.dest));
+const img = () =>
+  gulp
+    .src(path.img.src)
+    .pipe(
+      gp.plumber({
+        errorHandler: gp.notify.onError((error) => ({
+          title: 'IMG',
+          message: error.message,
+        })),
+      }),
+    )
+    .pipe(gp.newer(path.img.dest))
+    .pipe(gp.webp())
+    .pipe(gulp.dest(path.img.dest))
+    .pipe(gulp.src(path.img.src))
+    .pipe(gp.newer(path.img.dest))
+    .pipe(gp.if(app.isProd, gp.imagemin(app.imagemin)))
+    .pipe(gulp.dest(path.img.dest));
 
 export default img;

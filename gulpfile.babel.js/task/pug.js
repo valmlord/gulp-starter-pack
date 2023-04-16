@@ -1,6 +1,8 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import gulp from 'gulp';
 
 // Plugins
+// eslint-disable-next-line import/no-extraneous-dependencies
 import loadPlugins from 'gulp-load-plugins';
 
 // Config
@@ -9,17 +11,19 @@ import app from '../config/app';
 
 // PUG processing
 const gp = loadPlugins();
-const pug = () => gulp.src(path.pug.src)
-  .pipe(
-    gp.plumber({
-      errorHandler: gp.notify.onError((error) => ({
-        title: 'Pug',
-        message: error.message,
-      })),
-    }),
-  )
-  .pipe(gp.pug(app.pug))
-  .pipe(gp.webpHtml())
-  .pipe(gulp.dest(path.pug.dest));
+const pug = () =>
+  gulp
+    .src(path.pug.src)
+    .pipe(
+      gp.plumber({
+        errorHandler: gp.notify.onError((error) => ({
+          title: 'Pug',
+          message: error.message,
+        })),
+      }),
+    )
+    .pipe(gp.pug(app.pug))
+    .pipe(gp.webpHtml())
+    .pipe(gulp.dest(path.pug.dest));
 
 export default pug;

@@ -1,9 +1,15 @@
 {
-    "extends": ["airbnb"],
-    "globals": {
-      "$": true
-    },
-    "rules": {
-      // Here you can add your rules
-    }
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    // Here you can add your rules
+    "prettier/prettier": [
+      "error"
+    ]
+  }
 }

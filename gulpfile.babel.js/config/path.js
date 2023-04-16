@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const pathSrc = './src';
 const pathDest = './public';
 

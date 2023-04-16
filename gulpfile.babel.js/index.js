@@ -1,4 +1,6 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import gulp from 'gulp';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import browserSync from 'browser-sync';
 
 // Configuration
@@ -39,21 +41,14 @@ const watcher = () => {
   gulp.watch(path.favicon.watch, favicon).on('all', browserSync.reload);
 };
 
-const build = gulp.series(clear, gulp.parallel(html, pug, css, scss, js, font, img, svg, favicon));
+const build = gulp.series(
+  clear,
+  gulp.parallel(html, pug, css, scss, js, font, img, svg, favicon),
+);
 const dev = gulp.series(build, gulp.parallel(server, watcher));
 
 // Public Tasks
-export { 
-  html, 
-  pug, 
-  css, 
-  scss, 
-  js, 
-  font, 
-  img, 
-  svg, 
-  favicon 
-};
+export { html, pug, css, scss, js, font, img, svg, favicon };
 
 // Assembly
 export default app.isProd ? build : dev;

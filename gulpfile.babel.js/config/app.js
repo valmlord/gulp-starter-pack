@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import social from '../data/social.json';
 
 const isProd = process.argv.includes('--production');
@@ -37,7 +38,7 @@ export default {
       },
     },
     cheerio: {
-      run: function ($) {
+      run: function run($) {
         $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
         $('[style]').removeAttr('style');
