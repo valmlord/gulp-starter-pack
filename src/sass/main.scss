@@ -1,4 +1,4 @@
-@import url('base/*.scss');
-@import url('helpers/*.scss');
-@import url('vendor/_libs.scss');
-@import url('blocks/*.scss');
+@import 'vendor/_libs.scss';
+@import 'helpers/*.scss';
+@import 'base/*.scss';
+@import 'blocks/*.scss';

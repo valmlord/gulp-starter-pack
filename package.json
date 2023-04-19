@@ -88,8 +88,5 @@
     "stylelint-scss": "^4.6.0",
     "webpack": "^5.61.0",
     "webpack-stream": "^7.0.0"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
